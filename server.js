@@ -10,7 +10,8 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json()); // For JSON data
 app.use(express.urlencoded({ extended: true })); // ✅ NEW: For HTML form data
-app.use(express.static(path.join(__dirname, '../Frontend')));
+// app.use(express.static(path.join(__dirname, '../Frontend')));
+app.use(express.static("public"));
 
 app.get('/login', (req, res) => {
   res.sendFile(path.join(__dirname, '../Frontend', 'login.html'));
