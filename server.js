@@ -13,14 +13,14 @@ app.use(express.urlencoded({ extended: true })); // ✅ NEW: For HTML form data
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend', 'index.html'));
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend', 'login.html'));
+  res.sendFile(path.join(__dirname, 'public', 'login.html'));
 });
 
 app.get('/booking', (req, res) => {
-  res.sendFile(path.join(__dirname, '../Frontend', 'booking.html'));
+  res.sendFile(path.join(__dirname, 'public', 'booking.html'));
 });
 
 // Initialize Database
