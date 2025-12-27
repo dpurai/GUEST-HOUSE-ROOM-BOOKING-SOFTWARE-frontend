@@ -1,0 +1,8 @@
+-- database: ./guesthouse.db
+
+SELECT * FROM users;
+
+DELETE FROM users WHERE email= 'sayakashyap90.com' ;
+
+INSERT INTO users (email,password)
+VALUES ('aditya@gmail.com','aditya');
